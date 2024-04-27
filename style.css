@@ -8,7 +8,7 @@
 }
 
 nav {
-  background-color: #353333;
+  background-color: #221152;
   color: whitesmoke;
   display: -ms-grid;
   display: grid;
@@ -176,7 +176,7 @@ section #Info_Cont2 h3 {
   display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #353333;
+    background-color: #221152;
     color: whitesmoke;
     text-align: center;
     padding: 5px;
@@ -192,7 +192,7 @@ section #Info_Cont2 h3 {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #353333;
+  background-color: #221152;
   color: whitesmoke;
   padding: 0 4%;
   z-index: 1; /* Ensure it appears above the array bars */
