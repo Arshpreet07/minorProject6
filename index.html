@@ -3,100 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorting Visualizer</title>
+    <title>Home Page</title>
 
     <link rel="stylesheet" href="./css/style.css">
 
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            position: relative; /* Ensure proper positioning of fixed elements */
+            background-image: url('./2.jpg'); /* Add background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+        }
+
+        #empty-array-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #9031af; /* Dark purple background color */
+            padding: 10px 0; /* Add padding for spacing */
+            text-align: center;
+            z-index: 1000; /* Ensure it's above other content */
+        }
+
+        .nav-heading {
+            color: #ffffff; /* White text color */
+            font-size: 24px;
+        }
+
+        .info-container {
+            background-color: #9031af;; /* Lavender background color */
+            margin-bottom: 20px; /* Adjusted margin */
+            margin-left: 300px;
+            margin-right: 300px;
+            padding: 20px; /* Add padding for spacing */
+            border-radius: 10px; /* Rounded edges */
+            height: 80px; /* Increase height */
+            overflow: hidden; /* Hide overflow text */
+        }
+
+        .info-text {
+            color: #ffffff; /* White text color */
+            font-size: 18px;
+            text-align: center; /* Justify text for better readability */
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px; /* Adjust the margin to create space below the heading */
+        }
+
+        .funky-element {
+            font-size: 48px;
+            color: #ff00ff; /* Magenta color */
+            margin-bottom: 20px;
+        }
+
+        .enter-button {
+            padding: 15px 30px;
+            font-size: 24px;
+            background-color: #9031af; /* Cyan color */
+            color: #fff; /* White text color */
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Remove underline */
+        }
+
+        .enter-button:hover {
+            background-color: #371288; /* Darker cyan color on hover */
+        }
+
+        .empty-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px; /* Adjust the height as needed */
+            background-color: #221152; /* Light gray background color */
+        }
+
+        .Complexity_Containers {
+            background-color: #e6e6ff; /* Light purple background color */
+            border-radius: 10px; /* Rounded edges */
+            padding: 20px; /* Add padding for spacing */
+            margin-bottom: 20px; /* Add margin to separate from other elements */
+        }
+    </style>
 </head>
 <body>
     <div id="empty-array-container">
-    <p class="nav-heading">Sorting visualizer!</p>
+        <p class="nav-heading">Sorting visualizer!</p>
     </div>
-    <section>
-    <header class="bottom-header">
-        <nav>
-            <div class="array-inputs">
-                <p>Adjust size of array:</p>
-                <input id="a_size" type="range" min=20 max=150 step=1 value=20>
-                <p>Adjust speed of the algorithm:</p>
-                <input id="a_speed" type="range" min=1 max=5 step=1 value=3>
-                <button id="a_generate">Generate New Array!</button>
-            </div>
-
-            <div class="header_right">
-                
-
-                <div class="algos">
-                    <button >Bubble</button>
-                    <button >Selection</button>
-                    <button >Insertion</button>
-                    <button >Merge</button>
-                    <button >Quick</button>
-                    <button style="margin-right: 50px;">Heap</button>
-                </div>
-            </div>
-
-        </nav>
-    </header>
-
-        <div id="Info_Cont1">
-
-            <h3>TIME COMPLEXITY</h3>
-
-            <div class="Complexity_Containers" id="Time_Complexity_Types_Container">
-
-                <div class="Pair_Definitions">
-                    <p class="Sub_Heading">Worst case:</p>
-                    <p id="Time_Worst"></p>
-                </div>
-                
-                <div class="Pair_Definitions">
-                    <p class="Sub_Heading">Average case:</p>
-                    <p id="Time_Average"></p>
-                </div>
-                
-                <div class="Pair_Definitions">
-                    <p class="Sub_Heading">Best case:</p>
-                    <p id="Time_Best"></p>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div id="array_container">
-            
-        </div>
-
-        <div id="Info_Cont2">
-
-            <h3>SPACE COMPLEXITY</h3>
-
-            <div class="Complexity_Containers" id="Space_Complexity_Types_Container">
-
-                <div class="Pair_Definitions">
-                    <p class="Sub_Heading">Worst case:</p>
-                    <p id="Space_Worst"></p>
-                </div>
-                
-            </div>
-
-        </div>
-
-    </section>
-
-    <footer>
-
-    </footer>
-
-    <script src="./scripts/main.js"></script>   <!--This should be at the end of body and should be loaded before sorts.js-->
-    <script src="./scripts/visualizations.js"></script>  <!--This should be loaded after main.js-->
-
-    <script src="./scripts/bubble_sort.js"></script>
-    <script src="./scripts/selection_sort.js"></script>
-    <script src="./scripts/insertion_sort.js"></script>
-    <script src="./scripts/merge_sort.js"></script>
-    <script src="./scripts/quick_sort.js"></script>
-    <script src="./scripts/heap_sort.js"></script>
+   
+    <div class="info-container">
+        <p class="info-text">We all know that understanding sorting algorithms can be very difficult for the first time. So, this is a simple visualizer which visualizes the common sorting algorithms.</p>
+    </div>
+    <div class="container">
+        <div class="funky-element">📊</div>
+        <a href="visualizer.html" class="enter-button">Enter the Sorting Visualizer</a>
+    </div>
+   
 </body>
 </html>
